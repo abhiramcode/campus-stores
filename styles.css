@@ -323,6 +323,193 @@ body > main {
   font-size: 12px;
   background: transparent;
 }
+#campus-stores .shift-tasks {
+  list-style: none;
+  margin: 7px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 3px;
+  font-size: 12px;
+}
+#campus-stores .shift-tasks li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+#campus-stores .shift-tasks li > span {
+  min-width: 0;
+}
+#campus-stores .shift-tasks small {
+  color: inherit;
+  opacity: 0.85;
+}
+#campus-stores .shift-tasks .done {
+  opacity: 0.7;
+}
+#campus-stores .shift-tasks .taskmeta,
+#campus-stores .shift-tasks .taskdone {
+  font-weight: 650;
+}
+#campus-stores .shift-tasks .taskmeta {
+  margin-top: 2px;
+}
+#campus-stores .shift-tasks button {
+  font-size: 12px;
+  padding: 2px 7px;
+}
+#campus-stores .guard {
+  background: var(--memo);
+  color: var(--memotxt);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 10px;
+  flex-wrap: wrap;
+}
+#campus-stores .guard div {
+  flex: 1 1 220px;
+}
+#campus-stores .guard strong {
+  font-size: 13px;
+}
+#campus-stores .guard p {
+  margin-top: 2px;
+  font-size: 12px;
+}
+#campus-stores .guard button {
+  background: transparent;
+  border-color: var(--memotxt);
+  color: var(--memotxt);
+}
+#campus-stores .guard .primary {
+  background: var(--sel);
+  color: var(--inv);
+  border-color: var(--sel);
+}
+#campus-stores .readonly {
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  background: var(--desk);
+  padding: 7px 9px;
+  font-weight: 400;
+}
+#campus-stores .formnote {
+  grid-column: 1/-1;
+  margin: 0;
+  padding: 8px 10px;
+  background: var(--desk);
+  border-left: 3px solid var(--sel);
+  font-size: 12px;
+}
+#campus-stores .formerror {
+  color: var(--mark);
+  font-size: 12px;
+  margin: 6px 0;
+}
+#campus-stores .returnpanel {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 0 0 12px;
+}
+#campus-stores .returnpanel label {
+  font-size: 12px;
+  font-weight: 600;
+}
+#campus-stores .returnpanel label span {
+  margin-bottom: 3px;
+}
+#campus-stores .row > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#campus-stores .tag.late {
+  background: transparent;
+  border: 1px solid var(--mark);
+  color: var(--mark);
+}
+#campus-stores .issuecard {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+#campus-stores .issuecard-head h3 {
+  margin: 2px 0 4px;
+}
+#campus-stores .issuecard-items {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 6px;
+}
+#campus-stores .issuerow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 0;
+  border-top: 1px solid var(--line);
+}
+#campus-stores .issuerow:first-of-type {
+  border-top: none;
+}
+#campus-stores .issuerow > div:first-child {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+#campus-stores .issuerow > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+#campus-stores .btn-sm {
+  font-size: 12px;
+  padding: 3px 8px;
+  background: transparent;
+}
+#campus-stores .issuecard-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+#campus-stores .issuecard-form label {
+  font-size: 13px;
+  font-weight: 600;
+  flex: 1 1 200px;
+}
+#campus-stores .issuecard-form label span {
+  display: block;
+  margin-bottom: 3px;
+}
+#campus-stores .issuecard-form select {
+  width: 100%;
+}
+#campus-stores .issuecard-form button {
+  flex-shrink: 0;
+}
+#campus-stores .completed-issues {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+#campus-stores .completed-issues summary {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
 @container (max-width:650px) {
   #campus-stores .shell {
     grid-template-columns: minmax(0, 1fr);
@@ -348,13 +535,21 @@ body > main {
     padding: 12px;
   }
   #campus-stores .examstrip,
-  #campus-stores .shift {
+  #campus-stores .shift,
+  #campus-stores .guard {
     padding: 9px 12px;
   }
 }
 @container (max-width:420px) {
   #campus-stores .form {
     grid-template-columns: minmax(0, 1fr);
+  }
+  #campus-stores .issuecard-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #campus-stores .issuecard-form button {
+    width: 100%;
   }
   #campus-stores .brandmark {
     display: none;
